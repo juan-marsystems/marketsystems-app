@@ -1,0 +1,163 @@
+/* carrito-modal.component.css */
+.modal-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .carrito-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .carrito-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .carrito-info {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .carrito-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+  }
+  
+  .carrito-info p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .cantidad-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .cantidad-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cantidad-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .cantidad-text {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .guardar-btn, .vaciar-btn, .cerrar-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .guardar-btn:hover, .vaciar-btn:hover, .cerrar-btn:hover {
+    background-color: #218838;
+  }
+  
+  .vaciar-btn {
+    background-color: #ffc107;
+  }
+  
+  .vaciar-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .cerrar-btn {
+    background-color: #dc3545;
+  }
+  
+  .cerrar-btn:hover {
+    background-color: #c82333;
+  }
+
+  .comprar-btn {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 10px; /* Margen superior */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    border-radius: 4px; /* Borde redondeado */
+  }
+  
+  .comprar-btn:hover {
+    background-color: #45a049; /* Cambio de color al pasar el ratón */
+  }
+
+  .eliminar-btn {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Cambiar el color de fondo al pasar el ratón por encima */
+  .eliminar-btn:hover {
+    background-color: #d32f2f; /* Rojo más oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Cambiar el color de fondo al hacer clic */
+  .eliminar-btn:active {
+    background-color: #c62828; /* Rojo aún más oscuro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo para el icono dentro del botón */
+  .eliminar-btn .material-icons {
+    vertical-align: middle;
+    font-size: 18px;
+    margin-right: 8px;
+  }
+  
+  /* Espaciado para separar el botón de otros elementos */
+  .eliminar-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,20 @@
+/* app/ordenes-modal/ordenes-modal.component.css */
+
+.sin-ordenes {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  .orden {
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+  
+  .articulo {
+    border-top: 1px solid #ccc;
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+  

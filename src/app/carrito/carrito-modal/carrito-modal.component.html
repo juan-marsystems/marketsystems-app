@@ -1,0 +1,36 @@
+<!-- carrito-modal.component.html -->
+<h2 class="modal-title">Mi Carrito - Total: {{ calcularTotal() | currency }}</h2>
+
+<div *ngIf="carrito.length === 0" class="empty-cart">
+  <p>No tienes artículos en tu carrito. ¡Es un buen momento para empezar a comprar!</p>
+</div>
+
+<!-- carrito-modal.component.html -->
+
+<div *ngIf="carrito.length > 0" class="carrito-container">
+  <div *ngFor="let articulo of carrito" class="carrito-item">
+    <!-- <img [src]="articulo.imgArt" alt="{{ articulo.nombre }}" class="carrito-img"> -->
+    <div class="carrito-info">
+      <h3>{{ articulo.nombre }}</h3>
+      <p><strong>Cantidad:</strong> {{ articulo.cantidad }}</p>
+      <p><strong>Precio:</strong> {{ articulo.precio | currency }}</p>
+      <div class="cantidad-control">
+        <button class="cantidad-btn" (click)="decrementarCantidad(articulo)">-</button>
+        <span class="cantidad-text">{{ articulo.cantidad }}</span>
+        <button class="cantidad-btn" (click)="incrementarCantidad(articulo)">+</button>
+      </div>
+    </div>
+    <div class="eliminar-btn-container">
+      <button class="eliminar-btn" (click)="eliminarProducto(articulo.idArt)">
+        <span class="material-icons">delete</span>
+        Eliminar
+      </button>
+    </div>
+  </div>
+  <button class="guardar-btn" (click)="guardarCarrito()">Guardar Carrito</button>
+  <button class="vaciar-btn" (click)="vaciarCarrito()">Vaciar Carrito</button>
+  <button class="comprar-btn" (click)="realizarCompra()">Realizar compra</button>
+  
+</div>
+
+<button class="cerrar-btn" (click)="cerrarModal()">Cerrar</button>

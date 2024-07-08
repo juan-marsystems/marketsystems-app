@@ -1,0 +1,26 @@
+<nav>
+    <div>
+      <button mat-button (click)="abrirCarrito()">
+        <mat-icon class="carrito-icon">shopping_cart</mat-icon>
+      </button>
+      <button mat-button (click)="abrirOrdenes()">Órdenes</button>
+      <button mat-button (click)="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+  </nav>
+<section>
+    <h1>Bienvenido, {{ usuarioNombre }}</h1>
+    <div class="galeria-productos">
+        <div class="card" *ngFor="let producto of productos">
+            <img [src]="producto.imgArt" alt="{{ producto.nameArt }}">
+            <div class="card-body">
+                <h3>{{ producto.nameArt }}</h3>
+                <p><strong>Precio:</strong> {{ producto.priceArt | currency }}</p>
+                <p><strong>Stock:</strong> {{ producto.quantityArt }}</p>
+            </div>
+            <div class="card-buttons">
+                <button mat-button class="view-details" (click)="verMasInfo(producto.idArt)">Ver más info</button>
+                <button mat-button class="add-to-cart" (click)="agregarAlCarrito(producto)">Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+</section>

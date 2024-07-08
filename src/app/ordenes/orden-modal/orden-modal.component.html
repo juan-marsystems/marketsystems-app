@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Órdenes</h2>
+<mat-dialog-content>
+  <div *ngIf="data.ordenes.length === 0" class="sin-ordenes">
+    <p>No tienes órdenes aún. ¡Es un buen momento para empezar a comprar!</p>
+  </div>
+  <div *ngFor="let orden of data.ordenes" class="orden">
+    <h3>Orden #{{ orden.numeroOrden }}</h3>
+    <p><strong>Fecha:</strong> {{ orden.fechaOrden | date }}</p>
+    <p><strong>Total:</strong> {{ orden.totalOrden | currency }}</p>
+    <div *ngFor="let articulo of orden.articulos" class="articulo">
+      <p><strong>Artículo:</strong> {{ articulo.nombre }}</p>
+      <p><strong>Cantidad:</strong> {{ articulo.cantidad }}</p>
+      <p><strong>Precio:</strong> {{ articulo.precio | currency }}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="cerrar()">Cerrar</button>
+</mat-dialog-actions>

@@ -1,0 +1,8 @@
+<div class="dialog-container">
+    <h1>{{ data.nameArt }}</h1>
+    <img [src]="data.imgArt" alt="{{ data.nameArt }}">
+    <p>{{ data.descriptionArt }}</p>
+    <p class="price"><strong>Precio:</strong> {{ data.priceArt | currency }}</p>
+    <p class="stock"><strong>Stock:</strong> {{ data.quantityArt }}</p>
+    <button mat-button mat-dialog-close>Cerrar</button>
+</div>
